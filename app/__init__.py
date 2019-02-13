@@ -71,9 +71,9 @@ def init_cache(flask_app):
 
 
 def register_blueprints(flask_app):
-    from app.api.itunes_trade import itunes_trade_bp
+    from app.api.dnf import dnf_bp
 
-    flask_app.register_blueprint(itunes_trade_bp, url_prefix='/dnf')
+    flask_app.register_blueprint(dnf_bp, url_prefix='/dnf')
 
 
 

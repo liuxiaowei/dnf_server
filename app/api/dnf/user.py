@@ -9,10 +9,10 @@ import pyotp
 from sqlalchemy import or_
 
 from app.libs.http_utils import *
-from . import itunes_trade_bp
+from . import dnf_bp
 
 
-@itunes_trade_bp.route('/user/register', methods=['POST'])
+@dnf_bp.route('/user/register', methods=['POST'])
 def register():
     mac = request.headers.get('mac')
     user = TUser.query.filter(TUser.mac == mac).first()
@@ -28,7 +28,7 @@ def register():
     return render_ok(data)
 
 
-@itunes_trade_bp.route('/user/query', methods=['GET'])
+@dnf_bp.route('/user/query', methods=['GET'])
 def login():
     mac = request.headers.get('mac')
     user = TUser.query.filter(TUser.mac == mac).first()

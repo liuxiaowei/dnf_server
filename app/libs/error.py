@@ -26,7 +26,6 @@ class HTTPError(Exception):
         return {'code': self.ret, 'msg': self.msg, 'data': {}}
 
 
-
 def api_error_handler(error):
     response = jsonify(error.to_dict())
     return response, error.status_code

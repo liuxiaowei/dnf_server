@@ -4,13 +4,11 @@ from app.libs.redis_client import get_redis
 from app.libs.error_code import *
 
 
-itunes_trade_bp = Blueprint("itunes_trade", __name__)
+dnf_bp = Blueprint("dnf", __name__)
+from app.api.dnf import user
+from app.api.dnf import config
 
-from app.api.itunes_trade import user
-
-
-
-NO_CHECK_URLS = ['/user/query', '/user/register', '/user/captcha', '/user/forget_password', '/user/reset_password',
+NO_CHECK_URLS = ['/user/query', '/user/register', '/config/defines', '/user/forget_password', '/user/reset_password',
                  '/user/send_code', '/defines', '/config/footer', ]
 
 
@@ -29,7 +27,7 @@ def set_language():
     g.language = '_'.join(language)
 
 
-@itunes_trade_bp.before_request
+@dnf_bp.before_request
 def before_request_hook():
     set_language()
 
