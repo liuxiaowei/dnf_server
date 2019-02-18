@@ -1,6 +1,7 @@
 from . import dnf_bp
 import json
 from app.libs.http_utils import *
+from app.models import TUser, TUserConfig
 
 
 # 获取定义
@@ -582,3 +583,40 @@ def defines():
 
     }
     return render_ok(data)
+
+@dnf_bp.route('/config/user', methods=['POST'])
+def post_config_user():
+	mac = request.headers.get('mac')
+	config = get_json_arg('config')
+	user = TUser.query.filter(TUser.mac == mac).first()
+	if not user:
+		return render_ok()
+
+	config_info = TUserConfig.query.filter(TUserConfig.user_id == user.id).first()
+	if config_info:
+		config_info.config = config
+		config_info.save()
+	else:
+		userconfig = TUserConfig()
+		userconfig.user_id = user.id
+		userconfig.config = config
+		userconfig.save()
+
+	return render_ok()
+
+
+@dnf_bp.route('/config/user', methods=['GET'])
+def get_config_user():
+	mac = request.headers.get('mac')
+	user = TUser.query.filter(TUser.mac == mac).first()
+	if not user:
+		return render_ok()
+
+	config_info = TUserConfig.query.filter(TUserConfig.user_id == user.id).first()
+	data ={}
+	if config_info:
+		data ['config'] = config_info.config
+
+	return render_ok(data)
+
+

@@ -8,7 +8,7 @@ dnf_bp = Blueprint("dnf", __name__)
 from app.api.dnf import user
 from app.api.dnf import config
 
-NO_CHECK_URLS = ['/user/query', '/user/register', '/config/defines', '/user/forget_password', '/user/reset_password',
+NO_CHECK_URLS = ['/user/query', '/user/register', '/config/defines', '/config/user', '/user/reset_password',
                  '/user/send_code', '/defines', '/config/footer', ]
 
 

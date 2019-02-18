@@ -17,4 +17,8 @@ class TUser(Base):
     ip = db.Column(db.String(255))
 
 
+class TUserConfig(Base):
+    __tablename__ = 't_user_config'
 
+    user_id = db.Column(db.Integer)
+    config = db.Column(db.JSON)
