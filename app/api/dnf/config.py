@@ -159,83 +159,83 @@ def defines():
 	"profession_position": [
 	{
 			"name": "枪剑士(男)",
-			"positionX": 349,
-			"positionY": 699
+			"positionX": 98,
+			"positionY": 466
 	},
 	{
 			"name": "圣职者(女)",
-			"positionX": 464,
-			"positionY": 699
+			"positionX": 176,
+			"positionY": 466
 	},
 	{
 			"name": "魔枪士(男)",
-			"positionX": 579,
-			"positionY": 699
+			"positionX": 254,
+			"positionY": 466
 	},
 	{
 			"name": "鬼剑士(男)",
-			"positionX": 694,
-			"positionY": 699
+			"positionX": 332,
+			"positionY": 466
 	},
 	{
 			"name": "鬼剑士(女)",
-			"positionX": 809,
-			"positionY": 699
+			"positionX": 410,
+			"positionY": 466
 	},
 	{
 			"name": "神枪手(男)",
-			"positionX": 924,
-			"positionY": 699
+			"positionX": 488,
+			"positionY": 466
 	},
 	{
 			"name": "神枪手(女)",
-			"positionX": 1039,
-			"positionY": 699
+			"positionX": 566,
+			"positionY": 466
 	},
 	{
 			"name": "魔法师(男)",
-			"positionX": 1154,
-			"positionY": 699
+			"positionX": 644,
+			"positionY": 466
 	},
 	{
 			"name": "魔法师(女)",
-			"positionX": 349,
-			"positionY": 800
+			"positionX": 98,
+			"positionY": 533
 	},
 	{
 			"name": "守护者(女)",
-			"positionX": 464,
-			"positionY": 800
+			"positionX": 176,
+			"positionY": 533
 	},
 	{
 			"name": "格斗家(男)",
-			"positionX": 579,
-			"positionY": 800
+			"positionX": 254,
+			"positionY": 533
 	},
 	{
 			"name": "格斗家(女)",
-			"positionX": 694,
-			"positionY": 800
+			"positionX": 322,
+			"positionY": 533
 	},
 	{
 			"name": "圣职者(男)",
-			"positionX": 809,
-			"positionY": 800
+			"positionX": 410,
+			"positionY": 533
 	},
 	{
 			"name": "暗夜使者(男)",
-			"positionX": 924,
-			"positionY": 800
+			"positionX": 488,
+			"positionY": 533
 	},
 	{
 			"name": "黑暗武士(男)",
-			"positionX": 1039,
-			"positionY": 800
+			"positionX": 566,
+			"positionY": 533
 	},
 	{
 			"name": "缔造者(女)",
-			"positionX": 1154,
-			"positionY": 800
+			"positionX": 644,
+			"positionY": 533
 	}
 	],
 	"area":
