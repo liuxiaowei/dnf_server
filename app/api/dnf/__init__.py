@@ -7,9 +7,10 @@ from app.libs.error_code import *
 dnf_bp = Blueprint("dnf", __name__)
 from app.api.dnf import user
 from app.api.dnf import config
+from app.api.dnf import upgrade
 
-NO_CHECK_URLS = ['/user/query', '/user/register', '/config/defines', '/config/user', '/user/reset_password',
-                 '/user/send_code', '/defines', '/config/footer', ]
+NO_CHECK_URLS = ['/user/query', '/user/register', '/config/defines', '/config/user', '/upgrade/version',
+                 '/upgrade/files', 'upgrade/download', '/footer', ]
 
 
 def need_check():
