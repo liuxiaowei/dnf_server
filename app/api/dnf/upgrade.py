@@ -29,8 +29,10 @@ def upgrade_files():
 @dnf_bp.route('/upgrade/download', methods=['GET'])
 def download():
     filename = request.headers.get('filename')
+    print(filename)
     if filename:
         directory = os.getcwd()  # 假设在当前目录
+        print(directory)
         response = make_response(send_from_directory(directory, filename, as_attachment=True))
         response.headers["Content-Disposition"] = "attachment; filename={}".format(filename.encode().decode('latin-1'))
         return response
