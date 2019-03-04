@@ -14,7 +14,8 @@ from . import dnf_bp
 
 @dnf_bp.route('/user/register', methods=['POST'])
 def register():
-    mac = request.headers.get('mac')
+    mac = get_json_arg('mac')
+    note = get_json_arg('note')
     user = TUser.query.filter(TUser.mac == mac).first()
     data = {
         'status': 0
@@ -24,6 +25,7 @@ def register():
     else:
         user = TUser()
         user.mac = mac
+        user.note = note
         user.save()
     return render_ok(data)
 
@@ -33,9 +35,11 @@ def login():
     mac = request.headers.get('mac')
     user = TUser.query.filter(TUser.mac == mac).first()
     data = {
-        'status': 0
+        'status': 0,
+        'note': ''
     }
     if user:
         data['status'] = user.status
+        data['note'] = user.note
     return render_ok(data)
 

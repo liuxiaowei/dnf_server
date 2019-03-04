@@ -12,6 +12,7 @@ class TUser(Base):
     __tablename__ = 't_user'
 
     mac = db.Column(db.String(255))
+    note = db.Column(db.String(255))
     last_login = db.Column(db.DateTime)
     status = db.Column(db.SmallInteger)
     ip = db.Column(db.String(255))
