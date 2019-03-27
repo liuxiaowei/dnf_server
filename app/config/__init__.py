@@ -12,7 +12,7 @@ class Config:
 
     SQLALCHEMY_POOL_RECYCLE = 50 * 60
     SQLALCHEMY_TRACK_MODIFICATIONS = False
-    SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:Kaigedb_dev_mysql@rm-wz9bp66pjz4w72ss1ko.mysql.rds.aliyuncs.com:3306/dnf?charset=utf8'
+    SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:Kaigedb_dev_mysql@btc-dev-mysql.cpwnyzpuu5np.ap-northeast-1.rds.amazonaws.com:3306/dnf?charset=utf8'
 
     REDIS_HOST = 'localhost'
     REDIS_PORT = 6379
